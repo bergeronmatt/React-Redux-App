@@ -1,4 +1,4 @@
-import { GET_DATA } from "../actions";
+import { GET_DATA, UPDATE_CHARACTERS } from "../actions";
 
 
 const initialState = {
@@ -18,9 +18,15 @@ export const charactersReducer = (state = initialState, action) => {
         case GET_DATA:
             return {
                 ...state,
-                isFetchingData: true
+                isFetchingData: true,
+       
             };
-
+        case UPDATE_CHARACTERS:
+            return {
+                ...state,
+                characters: action.payload,
+                isFetchingData: false
+            }
         default: 
             return state;
     }
