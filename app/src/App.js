@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import './styles.css';
 
 import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
@@ -16,11 +17,15 @@ const store = createStore(reducer, applyMiddleware(thunk));
 function App() {
   return (
     <Provider store={store}>
-      <div className="App">
-        <h1>Rick and Morty Character List</h1>
-        <CharacterForm />
-        <CharactersList/>
-      </div>
+      <header className='App-header'>
+        <div className="App">
+          <h1>Rick and Morty Character List</h1>
+           <CharacterForm />
+          <div className='card-container'>
+          <CharactersList/>
+          </div>
+        </div>
+      </header>
     </Provider>
   );
 }

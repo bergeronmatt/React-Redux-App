@@ -1,0 +1,12 @@
+
+div.error{
+    color:red;
+}
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    border: red solid 1px;
+}
