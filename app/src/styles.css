@@ -4,9 +4,23 @@ div.error{
 }
 
 .card-container{
+    width: 60%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     margin: auto;
-    border: red solid 1px;
+    
+}
+
+.characterCard{
+    margin: 10px;
+    width: 40%;
+}
+
+.character-bio{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

@@ -7,10 +7,13 @@ const CharactersList = props => {
         {props.error ? (<div className='error'>{props.error}</div>) :  props.characters.map(character => (
             <div className="characterCard">
                 <img src={`https://rickandmortyapi.com/api/character/avatar/${character.id}.jpeg`} alt={`${character.name}`}/>
-                <h1>{character.name}</h1>
-                <h2>{character.species}</h2>
-                <h2>{character.gender}</h2>
-                <h2>{character.origin.name}</h2>
+                
+                <div className='character-bio'>
+                    <h1>{character.name}</h1>
+                    <p>{character.species}</p>
+                    <p>{character.gender}</p>
+                    <p>{character.origin.name}</p>
+                </div>
             </div>
             ))}
     </>
